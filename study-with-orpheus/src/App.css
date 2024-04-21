@@ -1,0 +1,26 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 100vh;
+  padding-left: 50px;
+  overflow: hidden;
+  background-color: #F4EFE6;
+}
+
+.header {
+  background-color: #f0f0f0;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.home-title {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.home-caption {
+  font-size: 1.2em;
+  margin-bottom: 4rem;
+}
