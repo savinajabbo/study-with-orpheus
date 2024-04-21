@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <h1 className="home-title">Orphedy</h1>
         <p className="home-caption">study with the one and only: Orpheus</p>
-        <Button variant="primary" to="/study">let's study</Button>
+        <Button variant="primary" to="/home">let's study</Button>
       </header>
     </div>
   );

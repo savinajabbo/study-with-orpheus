@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import './css/home.css';
+import Navbar from '../components/Navbar';
 
-function Study() {
+function Home() {
   const [currentTime, setCurrentTime] = useState(getCurrentTime());
 
   useEffect(() => {
@@ -18,11 +20,14 @@ function Study() {
   }
 
   return (
-    <div style={{ textAlign: 'center', marginTop: '50vh', transform: 'translateY(-50%)' }}>
-      <h2>"see ya later cutie pie ;)"</h2>
-      <h1>{currentTime}</h1>
+    <div className='study-container'>
+      <div style={{ textAlign: 'center', marginTop: '50vh', transform: 'translateY(-50%)' }}>
+        <h2>see ya later cutie pie ;)</h2>
+        <h1>{currentTime}</h1>
+      </div>
+      <Navbar />
     </div>
   );
 }
 
-export default Study;
+export default Home;

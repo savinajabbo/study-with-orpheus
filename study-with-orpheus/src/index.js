@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Study from './pages/study';
+import Home from './pages/home';
+import Ambient from './pages/ambient';
+import Focus from './pages/focus';
 
 import {
   createBrowserRouter,
@@ -17,8 +19,16 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "study",
-    element: <Study />,
+    path: "home",
+    element: <Home />,
+  },
+  {
+    path: "ambient",
+    element: <Ambient />,
+  },
+  {
+    path: "focus",
+    element: <Focus />,
   },
 ]);
 

@@ -15,8 +15,8 @@ const StyledButton = styled.button`
   transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 
   &:hover {
-    background-color: ${props => props.variant === 'primary' ? '#F4EFE6' : '#162A2C'};
-    color: #162A2C;
+    background-color: ${props => props.variant === 'primary' ? '#F4EFE6' : '#F4EFE6'};
+    color: ${props => props.variant === 'primary' ? '#162A2C' : '#162A2C'};;
     border: 2px solid ${props => props.variant === 'primary' ? '#162A2C' : '#5E6C5B'};
   }
 `;
