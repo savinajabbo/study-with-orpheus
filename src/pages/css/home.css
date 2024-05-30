@@ -1,0 +1,25 @@
+.study-container {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+.navbar {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    display: flex;
+}
+
+.navbar button {
+    margin-right: 10px;
+}
+
+.current-time {
+    font-size: 6rem;
+}
+  

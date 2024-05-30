@@ -1,0 +1,31 @@
+import React, { useState } from 'react';
+
+const SettingsComponent = () => {
+  const [selectedBackground, setSelectedBackground] = useState('');
+  const [showSettings, setShowSettings] = useState(false);
+
+  const handleBackgroundChange = (background) => {
+    setSelectedBackground(background);
+  };
+
+  const onClose = () => {
+    setShowSettings(false);
+  };
+
+  return (
+    <div style={{backgroundImage: `url(${selectedBackground})`}} className={showSettings ? 'settings-container show' : 'settings-container'}>
+      <div className="settings-content">
+        <h2>Settings</h2>
+        <label htmlFor="backgroundSelect">Select Background:</label>
+        <div className="settings-navigation">
+          <button onClick={() => handleBackgroundChange('path_to_background1')}><img src={background1} alt="Background 1" /></button>
+          <button onClick={() => handleBackgroundChange('path_to_background2')}><img src={background2} alt="Background 2" /></button>
+          <button onClick={() => handleBackgroundChange('path_to_background3')}><img src={background3} alt="Background 3" /></button>
+        </div>
+      </div>
+      <span className="close-button" onClick={onClose}>X</span>
+    </div>
+  );
+};
+
+export default SettingsComponent;
