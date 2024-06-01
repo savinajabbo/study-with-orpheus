@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/orphedy/static/css/main.05b91c0d.css",
+    "main.js": "/orphedy/static/js/main.1b8de728.js",
+    "static/js/453.795b36a9.chunk.js": "/orphedy/static/js/453.795b36a9.chunk.js",
+    "static/media/background3.jpeg": "/orphedy/static/media/background3.be0c7007ddeae85afc3e.jpeg",
+    "static/media/background2.jpeg": "/orphedy/static/media/background2.569ae73375cd67c1356c.jpeg",
+    "static/media/background1.jpeg": "/orphedy/static/media/background1.455da7b73f133d3ad5f4.jpeg",
+    "index.html": "/orphedy/index.html",
+    "main.05b91c0d.css.map": "/orphedy/static/css/main.05b91c0d.css.map",
+    "main.1b8de728.js.map": "/orphedy/static/js/main.1b8de728.js.map",
+    "453.795b36a9.chunk.js.map": "/orphedy/static/js/453.795b36a9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.05b91c0d.css",
+    "static/js/main.1b8de728.js"
+  ]
+}
