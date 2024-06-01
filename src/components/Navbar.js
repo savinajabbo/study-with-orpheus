@@ -15,8 +15,13 @@ function Navbar() {
       <Button to="/ambient">Ambient</Button>
       <Button to="/home">Home</Button>
       <Button to="/focus">Focus</Button>
-      <Button onClick={toggleSettings}>Settings</Button>
-      <Settings showSettings={showSettings} onClose={toggleSettings} />
+      <Button onClick={toggleSettings}>Open Settings</Button>
+      {showSettings && (
+        <Settings 
+          showSettings={showSettings}
+          onClose={toggleSettings}
+        />
+      )}
     </div>
   );
 }

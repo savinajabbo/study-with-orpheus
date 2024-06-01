@@ -1,6 +1,7 @@
 // PomodoroTimer.js
 import React, { useState, useEffect } from 'react';
 import './pomodorotimer.css';
+import Button from './Button';
 
 function PomodoroTimer() {
   const [currentTime, setCurrentTime] = useState(getCurrentTime());
@@ -75,16 +76,16 @@ function PomodoroTimer() {
   return (
     <div className='pomodoro-container'>
       <div className='controls'>
-        <button onClick={startTimer}>Work</button>
-        <button onClick={startShortBreak}>Short Break</button>
-        <button onClick={startLongBreak}>Long Break</button>
-        <button onClick={toggleSettings}>Settings</button>
+        <Button onClick={startTimer}>Focus</Button>
+        <Button onClick={startShortBreak}>Short Break</Button>
+        <Button onClick={startLongBreak}>Long Break</Button>
+        <Button onClick={toggleSettings}>Settings</Button>
       </div>
       <div className='timer'>
         <h1>{Math.floor(timeLeft / 60)}:{(timeLeft % 60).toString().padStart(2, '0')}</h1>
       </div>
       <div className='play-pause'>
-        <button onClick={togglePause}>{isPaused ? "Play" : "Pause"}</button>
+        <Button onClick={togglePause}>{isPaused ? "Play" : "Pause"}</Button>
       </div>
       {showSettings && (
         <div className='settings'>

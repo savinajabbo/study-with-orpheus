@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
@@ -7,6 +7,7 @@ import Home from './pages/home';
 import Ambient from './pages/ambient';
 import Focus from './pages/focus';
 import Settings from './components/Settings';
+import { BackgroundProvider } from './components/BackgroundContext';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -36,17 +37,11 @@ const router = createBrowserRouter([
 ]);
 
 const AppWithRouter = () => {
-  const [selectedBackground, setSelectedBackground] = useState('default');
-
-  const handleBackgroundChange = (background) => {
-    setSelectedBackground(background);
-  };
-
   return (
     <React.StrictMode>
-      <RouterProvider router={router} selectedBackground={selectedBackground} handleBackgroundChange={handleBackgroundChange}>
-        <App />
-      </RouterProvider>
+      <BackgroundProvider>
+        <RouterProvider router={router} />
+      </BackgroundProvider>
     </React.StrictMode>
   );
 };
