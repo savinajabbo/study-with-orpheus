@@ -1,31 +1,47 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import './settings.css';
-import background1 from '../images/background1.jpeg';
-import background2 from '../images/background2.jpeg';
-import background3 from '../images/background3.jpeg';
-import { BackgroundContext } from './BackgroundContext';
+import koibg from '../images/koi-bg.png';
+import grassbg from '../images/grass-bg.png';
+import aurabg from '../images/aura-bg.png';
+import { BackgroundContext } from '../context/BackgroundContext';
+import { useLocation } from 'react-router-dom';
 
-export const Settings = ({ showSettings, onClose }) => {
-  const { setSelectedBackground } = useContext(BackgroundContext);
-  const [localBackground, setLocalBackground] = useState('default');
+const Settings = ({ showSettings, onClose }) => {
+  const { setHomeBackground, setFocusBackground, setAmbientBackground } = useContext(BackgroundContext);
+  const location = useLocation();
 
   const handleBackgroundChange = (background) => {
-    setLocalBackground(background); // update local state in Settings
-    setSelectedBackground(background); // update global state
+    if (location.pathname === '/home') {
+      setHomeBackground(background);
+    } else if (location.pathname === '/focus') {
+      setFocusBackground(background);
+    } else if (location.pathname === '/ambient') {
+      setAmbientBackground(background);
+    }
   };
 
   return (
-    <div style={{ 
-      backgroundColor: 'white'
-    }} className={showSettings ? 'settings-container show' : 'settings-container'}>
+    <div className={`settings-container ${showSettings ? 'show' : ''}`}>
       <div className="settings-content">
         <h2>Settings</h2>
         <label htmlFor="backgroundSelect">Select Background:</label>
-        <div className="settings-navigation">
-          <button onClick={() => handleBackgroundChange(background1)}><img src={background1} alt="Background 1" /></button>
-          <button onClick={() => handleBackgroundChange(background2)}><img src={background2} alt="Background 2" /></button>
-          <button onClick={() => handleBackgroundChange(background3)}><img src={background3} alt="Background 3" /></button>
-        </div>
+        <ul className="settings-navigation">
+          <li>
+            <button onClick={() => handleBackgroundChange(koibg)} className='settings-bg'>
+              <img src={koibg} alt="koi fish background" />
+            </button>
+          </li>
+          <li>
+            <button onClick={() => handleBackgroundChange(grassbg)} className='settings-bg'>
+              <img src={grassbg} alt="grass background" />
+            </button>
+          </li>
+          <li>
+            <button onClick={() => handleBackgroundChange(aurabg)} className='settings-bg'>
+              <img src={aurabg} alt="aura background" />
+            </button>
+          </li>
+        </ul>
       </div>
       <span className="close-button" onClick={onClose}>X</span>
     </div>

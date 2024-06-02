@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useContext } from 'react';
 import './css/home.css';
 import Navbar from '../components/Navbar';
-import { BackgroundContext } from '../components/BackgroundContext';
+import { BackgroundContext } from '../context/BackgroundContext';
 
 function Home() {
-  const { selectedBackground } = useContext(BackgroundContext);
+  const { homeBackground } = useContext(BackgroundContext);
   const [currentTime, setCurrentTime] = useState(getCurrentTime());
 
   useEffect(() => {
@@ -23,12 +23,12 @@ function Home() {
 
   return (
     <div className='study-container' style={{ 
-      backgroundImage: `url(${selectedBackground})`,
+      backgroundImage: `url(${homeBackground})`,
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover',
     }}>
       <div style={{ textAlign: 'center', marginTop: '50vh', transform: 'translateY(-50%)' }}>
-        <h2>"insert random quote here"</h2>
+        <h2><i>"Small steps lead to great achievements."</i></h2>
         <h1 className='current-time'>{currentTime}</h1>
       </div>
       <Navbar />

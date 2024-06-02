@@ -7,7 +7,7 @@ import Home from './pages/home';
 import Ambient from './pages/ambient';
 import Focus from './pages/focus';
 import Settings from './components/Settings';
-import { BackgroundProvider } from './components/BackgroundContext';
+import { BackgroundProvider } from './context/BackgroundContext';
 import {
   createBrowserRouter,
   RouterProvider,

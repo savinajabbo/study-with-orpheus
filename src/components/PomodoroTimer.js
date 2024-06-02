@@ -1,4 +1,3 @@
-// PomodoroTimer.js
 import React, { useState, useEffect } from 'react';
 import './pomodorotimer.css';
 import Button from './Button';
@@ -6,13 +5,13 @@ import Button from './Button';
 function PomodoroTimer() {
   const [currentTime, setCurrentTime] = useState(getCurrentTime());
   const [isWorking, setIsWorking] = useState(false);
-  const [timeLeft, setTimeLeft] = useState(25 * 60); // 25 minutes in seconds
+  const [timeLeft, setTimeLeft] = useState(25 * 60); 
   const [showSettings, setShowSettings] = useState(false);
   const [workTime, setWorkTime] = useState(25);
   const [shortBreakTime, setShortBreakTime] = useState(5);
   const [longBreakTime, setLongBreakTime] = useState(15);
-  const [isPaused, setIsPaused] = useState(true); // Initially paused
-  const [isInitialPlay, setIsInitialPlay] = useState(true); // Flag to track initial play
+  const [isPaused, setIsPaused] = useState(true);
+  const [isInitialPlay, setIsInitialPlay] = useState(true);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -76,16 +75,16 @@ function PomodoroTimer() {
   return (
     <div className='pomodoro-container'>
       <div className='controls'>
-        <Button onClick={startTimer}>Focus</Button>
-        <Button onClick={startShortBreak}>Short Break</Button>
-        <Button onClick={startLongBreak}>Long Break</Button>
-        <Button onClick={toggleSettings}>Settings</Button>
+        <Button onClick={startTimer}>focus</Button>
+        <Button onClick={startShortBreak}>short break</Button>
+        <Button onClick={startLongBreak}>long break</Button>
+        <Button onClick={toggleSettings}>settings</Button>
       </div>
       <div className='timer'>
         <h1>{Math.floor(timeLeft / 60)}:{(timeLeft % 60).toString().padStart(2, '0')}</h1>
       </div>
       <div className='play-pause'>
-        <Button onClick={togglePause}>{isPaused ? "Play" : "Pause"}</Button>
+        <Button onClick={togglePause}>{isPaused ? "play" : "pause"}</Button>
       </div>
       {showSettings && (
         <div className='settings'>

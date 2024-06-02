@@ -1,3 +1,7 @@
+html {
+    background-color: #F3EFE6;
+}
+
 .study-container {
     position: relative;
     min-height: 100vh;
@@ -20,7 +24,8 @@
 }
 
 .current-time {
-    font-size: 6rem;
+    font-size: 8rem;
+    color: #162A2B;
 }
 
 .settings-container {

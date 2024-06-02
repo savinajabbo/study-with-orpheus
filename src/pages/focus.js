@@ -1,15 +1,17 @@
 import React, { useContext } from 'react';
 import Navbar from '../components/Navbar';
 import PomodoroTimer from '../components/PomodoroTimer';
-import { BackgroundContext } from '../components/BackgroundContext';
+import { BackgroundContext } from '../context/BackgroundContext';
 import './css/focus.css';
 
 function Focus() {
-  const { selectedBackground } = useContext(BackgroundContext);
+  const { focusBackground } = useContext(BackgroundContext);
 
   return (
     <div className='focus-container' style={{ 
-      backgroundImage: `url(${selectedBackground})`,
+      backgroundImage: `url(${focusBackground})`,
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'cover',
     }}>
       <PomodoroTimer />
       <Navbar />

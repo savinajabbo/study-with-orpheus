@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const StyledButton = styled.button`
-  background-color: ${props => props.variant === 'primary' ? '#162A2C' : '#5E6C5B'}; 
-  color: #fff; 
+  background-color: ${props => props.variant === 'primary' ? '#162A2C' : '#162A2C'}; 
+  color: #FEFCF6; 
   padding: ${props => props.size === 'small' ? '5px 10px' : '10px 20px'};
   font-size: 1em; 
   border: 2px solid transparent;
@@ -15,9 +15,9 @@ const StyledButton = styled.button`
   transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 
   &:hover {
-    background-color: ${props => props.variant === 'primary' ? '#F4EFE6' : '#F4EFE6'};
-    color: ${props => props.variant === 'primary' ? '#162A2C' : '#162A2C'};;
-    border: 2px solid ${props => props.variant === 'primary' ? '#162A2C' : '#5E6C5B'};
+    background-color: ${props => props.variant === 'primary' ? '#FEFCF6' : '#FEFCF6'};
+    color: ${props => props.variant === 'primary' ? '#162A2C' : '#162A2C'};
+    border: 2px solid ${props => props.variant === 'primary' ? '#162A2C' : '#162A2C'};
   }
 `;
 

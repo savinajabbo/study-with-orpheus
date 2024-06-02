@@ -12,10 +12,10 @@ function Navbar() {
 
   return (
     <div className='navbar'>
-      <Button to="/ambient">Ambient</Button>
-      <Button to="/home">Home</Button>
-      <Button to="/focus">Focus</Button>
-      <Button onClick={toggleSettings}>Open Settings</Button>
+      <Button to="/ambient">ambient</Button>
+      <Button to="/home">home</Button>
+      <Button to="/focus">focus</Button>
+      <Button onClick={toggleSettings}>settings</Button>
       {showSettings && (
         <Settings 
           showSettings={showSettings}
