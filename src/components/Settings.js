@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import './settings.css';
 import koibg from '../images/koi-bg.png';
 import grassbg from '../images/grass-bg.png';
-import aurabg from '../images/aura-bg.png';
+import aurabg from '../images/aura.png';
 import { BackgroundContext } from '../context/BackgroundContext';
 import { useLocation } from 'react-router-dom';
 

@@ -20,7 +20,7 @@
   }
   
   .settings-container.show {
-    right: 0; /* Slide in from the right */
+    right: 0; 
     display: flex;
     flex-direction: column;
     overflow-y: auto; 
