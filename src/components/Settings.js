@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
-import './settings.css';
+import './css/settings.css';
 import koibg from '../images/koi-bg.png';
 import grassbg from '../images/grass-bg.png';
-import aurabg from '../images/aura.png';
+import aurabg from '../images/aura.png'; // Updated image path
 import { BackgroundContext } from '../context/BackgroundContext';
 import { useLocation } from 'react-router-dom';
 
@@ -29,16 +29,19 @@ const Settings = ({ showSettings, onClose }) => {
           <li>
             <button onClick={() => handleBackgroundChange(koibg)} className='settings-bg'>
               <img src={koibg} alt="koi fish background" />
+              <p>enchanted koi</p>
             </button>
           </li>
           <li>
             <button onClick={() => handleBackgroundChange(grassbg)} className='settings-bg'>
               <img src={grassbg} alt="grass background" />
+              <p>serene meadow</p>
             </button>
           </li>
           <li>
             <button onClick={() => handleBackgroundChange(aurabg)} className='settings-bg'>
               <img src={aurabg} alt="aura background" />
+              <p>aura</p>
             </button>
           </li>
         </ul>

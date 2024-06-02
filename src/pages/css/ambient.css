@@ -19,6 +19,8 @@
 .clock {
     font-size: 2.5rem;
     font-weight: bold;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
 }
 
 .quote {

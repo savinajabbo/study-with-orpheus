@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Button from './Button';
 import Settings from '../components/Settings';
-import './navbar.css';
+import './css/navbar.css';
 
 function Navbar() {
   const [showSettings, setShowSettings] = useState(false);

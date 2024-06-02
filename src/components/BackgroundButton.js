@@ -1,5 +1,5 @@
 import React from 'react';
-import './BackgroundButton.css';
+import './css/BackgroundButton.css';
 
 const BackgroundButton = ({ onClick, backgroundSrc, altText }) => {
   return (

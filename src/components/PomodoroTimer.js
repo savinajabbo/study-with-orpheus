@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './pomodorotimer.css';
+import './css/pomodorotimer.css';
 import Button from './Button';
 
 function PomodoroTimer() {
